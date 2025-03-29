@@ -37,7 +37,7 @@ y_pred = model.predict(X_test)
 
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Độ chính xác: {accuracy:.2f}")
-joblib.dump(model, "model.pkl")
+# joblib.dump(model, "model.pkl")
 
 
 """Test bằng cách nhập bàn phím"""
