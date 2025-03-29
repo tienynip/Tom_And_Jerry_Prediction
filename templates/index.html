@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dự đoán Tom & Jerry</title>
+    <link rel="stylesheet" href="{{ css_url }}">
+</head>
+<body>
+    <h2>Tải lên một hình ảnh</h2>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <button type="submit">Dự đoán</button>
+    </form>
+
+    {% if image_url %}
+        <h3>Kết quả: {{ result }}</h3>
+        <img src="{{ image_url }}" alt="Hình ảnh" width="200px">
+    {% endif %}
+
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+</body>
+</html>
